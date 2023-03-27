@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="../color/MainForm.css">
+    <title>Address Book</title>
+</head>
+
+<body>
+
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../Assets/book.jpeg" alt="logo" onclick="location.href='/Pages/DisplayForm.html'">
+            <div>
+                <span class="book-text">ADDRESS</span><br>
+                <span class="book-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(event); false" onreset="reset();">
+            <div class="form-head">
+                <span class="form-head-text">PERSON ADDRESS FORM</span>
+                <span class="cross-icon">
+                    <img src="../Assets/cancle.jpeg" class="close-circle" name="close-circle" onclick="location.href='/Pages/MainForm.html'">
+                </span>
+            </div>
+            <div class="body">
+
+                <label class="label text" for="name">Full Name</label><br>&nbsp;
+                <error-output class="text-error"></error-output>&nbsp;
+                <input class="input" type="text" id="name" name="name" placeholder="Enter your name here" required>
+
+                <label class="label-text-phone" for="phone">Phone Number</label><br>&nbsp;
+                <error-output class="phone-error"></error-output>&nbsp;
+                <input class="input" type="tel" id="phone" name="phone" placeholder="Enter your phone number here"
+                    required>
+
+
+                <label class="label text" for="address">Address</label><br>&nbsp;
+                <error-output class="address-error"></error-output>&nbsp;
+                <textarea id="address" class="input" name="address" placeholder="Enter your address here"
+                    style="height: 100px; "></textarea>
+
+                <div class="row-content">&nbsp;
+                    <div class="label-city">
+                        <label class="city" for="city">City</label><br>&nbsp;
+                        <select id="city" name="city">
+                            <option value="0">Select City</option>
+                            <opti.add-reset {
+                                width: 104%;
+                                height: 10vh;
+                                background: #ffffff;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                padding: 20px 0px 0px 0px;
+                            }
+                            
+                            button {
+                                width: 300px;
+                                height: 50px;
+                                border: none;
+                                outline: none;
+                                background: #D3D3D3;
+                                color: #384135;
+                                font-size: 16px;
+                                border-radius: 15px;
+                                text-align: center;
+                                position: relative;
+                                overflow: hidden;
+                                cursor: pointer;
+                                margin: auto;
+                            }
+                            
+                            button:hover {
+                                color: #3179fd;
+                                border: #3179fd solid 1px;
+                                background: #fff;
+                            }
+                            
+                            .addButton,
+                            .resetButton {
+                                margin-right: 5%;
+                            }on value="Kolkata">Kolkata</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Solapur">Solapur</option>
+                            <option value="Kota">Kota</option>
+                            <option value="Gurugram">Gurugram</option>
+                        </select>
+                    </div>
+                    <div class="label-state">
+                        <label class="state" for="state">State</label><br>&nbsp;
+                        <select id="state" name="state">
+                            <option value="">Select State</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Jammu Kashmir">Jammu Kashmir</option>
+                        </select>
+                    </div>
+                    <div class="label-zip">
+                        <label class="zip" for="zipcode">Zipcode</label></br>&nbsp;
+                        <error-output class="zip-error"></error-output>&nbsp;
+                        <input class="input" type="zipcode" id="zipcode" name="zipcode"></input>
+
+                    </div>
+                </div>
+                <div class="add-reset">
+                    <a href="DisplayForm.html"></a>
+                    <button type="submit" class="addButton" id="addButton">Submit</button>
+                    <button type="reset" class="resetButton" id="resetButton">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/Js/AddresssBook.js"></script>
+    <script src="/Js/ValidationOperation.js"></script>
+</body>
+
+</html>
